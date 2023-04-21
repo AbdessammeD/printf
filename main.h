@@ -11,6 +11,7 @@ struct op
 	int (*f)(va_list);
 };
 typedef struct op op;
+int print_symbol(va_list args);
 int handle_char(va_list args);
 int handle_numbers(va_list args);
 int handle_string(va_list args);
