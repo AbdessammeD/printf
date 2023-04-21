@@ -5,10 +5,18 @@
 #include <stdarg.h>
 #include <stdlib.h>
 
-int my_strlen(char *s);
+struct op
+{
+	char *op;
+	int (*f)(va_list);
+};
+typedef struct op op;
+int handle_char(va_list args);
+int handle_numbers(va_list args);
+int handle_string(va_list args);
+int handle_binary(va_list args);
 int print_binary(unsigned int binary);
 int print_number(int integer);
-int print(char c, va_list args);
 int _printf(const char *format, ...);
 
 #endif

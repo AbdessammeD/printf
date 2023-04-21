@@ -33,3 +33,17 @@ int print_number(int integer)
 	write(1, &digit, 1);
 	return (l);
 }
+/**
+ * handle_numbers - handle numbers.
+ * @args: arguments.
+ *
+ * Return: current lenght.
+ */
+int handle_numbers(va_list args)
+{
+	int n = va_arg(args, int);
+	int len = 0;
+
+	len = print_number(n);
+	return (len);
+}

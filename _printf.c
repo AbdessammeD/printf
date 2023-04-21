@@ -25,6 +25,11 @@ int _printf(const char *format, ...)
 				va_end(args);
 				return (-1);
 			}
+			if (format[i] == '%')
+			{
+				write(1, "%", 1);
+				lenght++;
+			}
 			else if (format[i])
 				length += print(format[i], args);
 		}

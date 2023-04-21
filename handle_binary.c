@@ -21,3 +21,17 @@ int print_binary(unsigned int binary)
 		write(1, "0", 1);
 	return (l);
 }
+/**
+ * handle_binary - handle binary.
+ * @args: arguments.
+ *
+ * Return: current lenght.
+ */
+int handle_binary(va_list args)
+{
+	int len = 0;
+	int n = va_arg(args, int);
+
+	len = print_binary(n);
+	return (len);
+}
